@@ -1,38 +1,115 @@
+/* Reset & body */
 body {
-  font-family: Arial;
-  background: #121212;
-  color: white;
-  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: #1e1e2f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
+/* Calculator container */
 .container {
-  margin-top: 50px;
-}
-
-input {
-  width: 260px;
-  padding: 10px;
-  font-size: 18px;
+  background: #2c2c3c;
+  padding: 30px 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
   text-align: center;
+  width: 320px;
 }
 
+/* Big XCLUSYVE title */
+.container h1 {
+  font-family: 'Courier New', monospace;
+  font-size: 28px;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+/* Input box */
+input {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #3b3b4f;
+  color: #fff;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Button grid */
 .buttons {
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
+/* Calculator buttons */
 button {
-  width: 60px;
-  height: 50px;
-  margin: 5px;
+  padding: 18px 0;
   font-size: 18px;
+  border-radius: 12px;
+  border: none;
   cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px #1a1a2b;
 }
 
+/* Number buttons style */
+.buttons button:nth-child(-n+12),
+.buttons button:nth-child(13) {
+  background: #4a4a6b;
+  color: #fff;
+}
+
+.buttons button:nth-child(-n+12):hover,
+.buttons button:nth-child(13):hover {
+  background: #5c5c87;
+}
+
+/* Operator buttons style */
+.buttons button:nth-child(4n),
+.buttons button:nth-child(16) {
+  background: #ff9500;
+  color: #fff;
+}
+
+.buttons button:nth-child(4n):hover,
+.buttons button:nth-child(16):hover {
+  background: #ffaa33;
+}
+
+/* Controls buttons */
 .controls button {
-  width: 130px;
+  width: 48%;
+  margin: 0 1%;
+  padding: 15px 0;
+  font-size: 18px;
+  border-radius: 12px;
+  background: #ff3b3b;
+  color: #fff;
+  box-shadow: 0 4px #a90000;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
+.controls button:hover {
+  background: #ff5b5b;
+}
+
+/* Result text */
 #result {
-  margin-top: 20px;
-  font-size: 22px;
+  font-size: 24px;
+  margin-top: 15px;
+  min-height: 30px;
+  color: #00ff99;
+  text-shadow: 1px 1px 2px #000;
 }
