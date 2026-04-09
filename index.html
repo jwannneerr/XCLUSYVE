@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Algebra Calculator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Algebra Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/nerdamer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/Algebra.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Algebra Calculator</h1>
+
+  <input id="input" type="text" placeholder="Enter equation (e.g. 2x+3=7)">
+
+  <div class="buttons">
+    <button onclick="add('7')">7</button>
+    <button onclick="add('8')">8</button>
+    <button onclick="add('9')">9</button>
+    <button onclick="add('+')">+</button>
+
+    <button onclick="add('4')">4</button>
+    <button onclick="add('5')">5</button>
+    <button onclick="add('6')">6</button>
+    <button onclick="add('-')">-</button>
+
+    <button onclick="add('1')">1</button>
+    <button onclick="add('2')">2</button>
+    <button onclick="add('3')">3</button>
+    <button onclick="add('*')">×</button>
+
+    <button onclick="add('0')">0</button>
+    <button onclick="add('x')">x</button>
+    <button onclick="add('=')">=</button>
+    <button onclick="add('/')">÷</button>
+  </div>
+
+  <div class="controls">
+    <button onclick="solve()">Solve</button>
+    <button onclick="clearInput()">Clear</button>
+  </div>
+
+  <p id="result"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
